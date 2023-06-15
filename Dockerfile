@@ -1,8 +1,13 @@
-FROM golang:alpine
+FROM golang:1.19-alpine
 
-LABEL maintener="VMS" version="1.0" description="ascii-art-web-dockerize"
-
-LABEL taille="332MB"
+LABEL maintener="Seynabou NIANG <https://learn.zone01dakar.sn/git/sniang>"
+LABEL maintener="Vincent Félix NDOUR <https://learn.zone01dakar.sn/git/vindour>"
+LABEL maintener="Masseck THIAW <https://learn.zone01dakar.sn/git/mthiaw>"
+LABEL name="Ascii-Art-Web-Dockerize"
+LABEL documentation="This Web app allows you to generate the graphic representation of all the printable ASCII-This is the dockerize version of it"
+LABEL README="<https://learn.zone01dakar.sn/git/sniang/ascii-art-web-dockerize/src/branch/master/README.md>"
+LABEL version="1.0.0"
+LABEL License="VMS team"
 
 RUN mkdir /build
 
@@ -12,8 +17,9 @@ ADD . /build
 
 RUN go build -o main .
 
-RUN apk update && apk add bash && apk add tree
+RUN apk update && apk add bin && apk add bash
 
 EXPOSE 8080
 
 CMD [ "/build/main" ]
+
