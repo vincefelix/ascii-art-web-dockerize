@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ascii-art-web</title>
+        <link rel="stylesheet" href="/static/style_int.css">
+        <link rel="shortcut icon" href="/static/images/logo.png"> <!--web icon-->
+    </head>
+<body>
+    <div class="filtre"></div>
+    <nav>
+       <a href="http://localhost:8080/landing_page"> <img src="/static/images/logo.png" alt="logo zone01dakar" id="logo"></a>
+        <div id="components">
+            <p><a href="http://localhost:8080/landing_page">HOME</a></p>
+            <div class="vertical_line"></div>
+            <p><a href="https://learn.zone01dakar.sn/intra/dakar/div-01/ascii-art-web?event=55" target="_blank">INTRA</a></p>
+            <div class="vertical_line"></div>
+            <p><a href="https://learn.zone01dakar.sn/git/vindour/ascii-art-web/src/branch/master/README.md" target="_blank">README</a></p>
+            <div class="vertical_line"></div>
+            <p class="lastp"><a href="https://learn.zone01dakar.sn/git/vindour/ascii-art-web/src/branch/master/README.md#user-content-authors" target="_blank">ABOUT US</a></p>
+        </div>
+    </nav>
+
+    <main>
+        <section class="api">
+            <form action="/ascii-art" method="POST">
+            <fieldset class="banner_choice">
+            <label for="banner">
+                banner:
+            <select name="banner" id="banner">
+                <option value="standard">standard</option>
+                <option value="shadow">shadow</option>
+                <option value="thinkertoy">thinkertoy</option>
+            </select>
+        </label>
+        </fieldset>
+
+        
+        <fieldset class="output_area">
+            <textarea name="text" wrap="off" id="output" cols="60" rows="10" placeholder="type here ..."></textarea>
+        </fieldset>
+           <input type="submit" value="Generate" id="generate">
+          </form>
+        </section>
+
+        <section class="output">
+            <textarea name="result" id="result" wrap="off" cols="145" rows="20" style="color: black;">{{if .AsciiArt}}{{.AsciiArt}}{{end}}</textarea>
+        </section>
+        <a href="/static/thank_you_page.html"><button id="end">End the audit</button></a>
+    </main>
+    
+    <footer>
+        <div id="band">
+            <p id="licensed">@licensed by VMS team</p>
+        </div>
+    </footer>
+</body>
+</html>

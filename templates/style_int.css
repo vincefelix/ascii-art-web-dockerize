@@ -1,0 +1,487 @@
+body {
+    max-width: 100%;
+    background:linear-gradient(181.02deg, #F7F7F7 -0.25%, #61A9EB -0.24%, #DFE6EF 92.26%);
+
+    margin: 0 auto;
+    overflow-x:hidden;
+    overflow-y: scroll;
+}
+
+.filtre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 211%;
+    background: #095FAE;
+    mix-blend-mode: overlay;
+    z-index: 9999;
+    /* Valeur de profondeur pour s'assurer que le div est superposé sur le reste de la page */
+    pointer-events: none;
+}
+
+/* 1 step: nav part */
+#logo {
+    height: auto;
+    max-width: 45%;
+    padding-left: 20px;
+    padding-top: 7%;
+    mix-blend-mode: luminosity;
+    opacity: 90%;
+    margin: 0;
+}
+
+nav {
+    top: -5px;
+    z-index: 10;
+    position: sticky;
+    margin: 0 7.5%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    background: rgba(1, 14, 48, 0.38);
+    box-shadow: 0px 4px 4px rgba(255, 255, 255), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 28px;
+
+}
+
+#components {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+#components p {
+    font-size: 110%;
+    margin: 0 20px;
+}
+
+.lastp {
+    margin-right: 0;
+}
+
+
+.vertical_line {
+    margin: 0 10px;
+    height: 20px;
+    mix-blend-mode: overlay;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+}
+
+#nav_bar_graphism {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: -8% 29%;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 20px;
+    opacity: 50%;
+}
+
+nav p {
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 34px;
+    text-align: center;
+    letter-spacing: 0.335em;
+    cursor: pointer;
+
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(62, 63, 63);
+    font-weight: 800;
+    font-size: larger;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    text-shadow: 0px 4px 4px blue;
+    transition: all .2s ease-out;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------2 step: main part---------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+main {
+    position: relative;
+    top: 35px;
+    margin-top: 48px;
+    margin-bottom: 10%;
+height: auto;
+}
+
+
+.api {
+    width: 50%;
+margin: -5% auto;
+border-width: 9px 0px 7px 0px;
+border-style:groove;
+border-color: #EE991A;
+box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+background: rgba(0, 133, 255, 0.22);
+mix-blend-mode:normal;
+}
+
+.banner_choice {
+    border-style: none;
+    margin: 2% 15%;
+    color: white;
+    font-family: 'Crimson Pro';
+font-weight: 600;
+font-size: 22px;
+text-align: left;
+letter-spacing: 0.185em;
+color: #FFFAFA;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#banner{
+    background: #848484;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: white;
+width: 60%;
+font-family: 'Crimson Pro';
+font-weight: 600;
+font-size: 18px;
+line-height: 20px;
+border: 1px dashed rgb(255, 166, 0);
+
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.26em;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+cursor:pointer;
+}
+
+.output_area {
+    margin: 0 auto;
+    width: 80%;
+    background: rgba(255, 255, 255, 1);
+box-shadow: 4px 2px 12px 14px rgba(0, 0, 0, 0.09);
+border-radius: 28px;
+border: 3px solid #EE991A;
+opacity: 100%;
+height: auto;
+}
+
+#output {
+    border-style: none;
+    background: none;
+   font-family: 'Courier New', Courier, monospace;
+   font-size:  12px;
+   mix-blend-mode: darken;
+   letter-spacing: 2px;
+   font-style: bold; 
+   width:100%;
+   height:100%;
+
+}
+
+#generate {
+    margin: 2% 35%;
+    width: 30%;
+    position: relative;
+    background: #FFD698;
+    border-bottom: 8px solid #EE991A;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    height: auto;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    font-style: bold;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.45em;
+    color: #000000;
+    border: 1px solid #9C5E00;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+    cursor: pointer;
+    transition: all .2s ease-out;
+
+}
+
+
+#generate:hover {
+    color: rgb(10, 115, 235);
+    background-color: rgb(62, 63, 63);
+    font-weight: 800;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    box-shadow: 0px 4px 4px blue;
+    mix-blend-mode: multiply;
+    font-size: 18px;
+    transition: all .2s ease-out;
+
+}
+
+.output {
+    margin: 8% 5% 2% 5%;
+    width: 87%;
+    background:linear-gradient(93.53deg, #F2B20C 21.5%, #000000 37.67%, #1AAAFB 49.17%, #0D6BF9 62.17%);
+    padding: 1% 1%;
+    border-radius: 57px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#result {
+    display: block;
+    padding-left: 4%;
+    padding-right: -4%;
+    padding-top: 2%;
+    margin: 1%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    border-radius: 57px;
+}
+
+
+
+#end:hover {
+    color: rgb(10, 115, 235);
+    background-color: rgb(62, 63, 63);
+    font-weight: 800;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    box-shadow: 0px 4px 4px blue;
+    mix-blend-mode: multiply;
+    font-size: 25px;
+    transition: all .2s ease-out;
+
+}
+
+
+#end{
+    position: relative;
+    margin-left: 35%;
+    margin-right: 35%;
+    background: #FFD698;
+    border-bottom: 8px solid #EE991A;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    width: 35%;
+    height: auto;
+    font-size: x-large;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.45em;
+    color: #000000;
+    border: 1px solid #9C5E00;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+}
+
+/*3 step: footer part part*/
+
+footer {
+    margin-top: 30%;
+    margin-bottom: 0%;
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+
+#band {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+    background-color: rgba(152, 213, 233, 0.38);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height:auto;
+    width: 100%;
+    mix-blend-mode: multiply;
+    opacity: 50%;
+    padding-bottom:1%;
+}
+
+#band p {
+    display: flex;
+    margin-left: 35px;
+    padding-top: 8px;
+    font-family: 'cuprum', 'crimson text', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #514c4c;
+    line-height: 23px;
+    width: 50%;
+}
+
+@media screen and (max-width: 730px){
+
+nav {
+    display: block;
+    margin-top:-1%;
+    position: fixed;
+    width: auto;
+    height: auto;
+    background: rgba(1, 14, 48, 0.38);
+    box-shadow: 4px 8px 2px rgba(5, 5, 5, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 48px;
+    margin-left: -1%;
+    margin-right: 2%;
+    transition: all .2s linear;
+}
+.vertical_line {
+    display:none;
+}
+
+#components { 
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 3px ;
+    transition: all .2s ease-out;
+}
+#logo {
+    height: auto;
+    max-width: 45%;
+    padding-top: 15%;
+    padding-left: 25%;
+    mix-blend-mode: luminosity;
+    opacity: 95%;
+}
+
+#components p {
+    font-size: 80%;
+}
+
+nav p {
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 26px;
+    letter-spacing: 0.335em;
+    cursor: pointer;
+
+}
+
+
+main {
+    position: relative;
+    margin-top: 1px;
+    transition: all .2s ease-out;
+}
+
+.api {
+    margin: 4% 40%;
+    transition: all .2s ease-out;
+
+}
+
+#banner {
+    width:100%;
+    transition: all .2s ease-out;
+
+}
+
+#generate {
+    position: relative;
+    z-index: 3;
+    margin: 4% 12%;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    background: #FFD698;
+    border: 8px solid #EE991A;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    width: 80%;
+    height: auto;
+    font-family: 'Cherry Bomb', 'crimson text';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 110%;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.45em;
+    color: #000000;
+    border: 1px solid #9C5E00;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    mix-blend-mode: hard-light;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+#generate:hover {
+    color: rgb(10, 115, 235);
+    background-color: rgb(62, 63, 63);
+    font-weight: 800;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    box-shadow: 0px 4px 4px blue;
+    mix-blend-mode: multiply;
+    font-size: 30px;
+    transition: all .2s ease-out;
+
+}
+
+#result {
+    padding: 4%;
+}
+
+#end{
+    position: relative;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    background: #FFD698;
+    border-bottom: 8px solid #EE991A;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 64px;
+    width: 65%;
+    height: auto;
+    font-size: x-large;
+    font-family: 'Cherry Bomb', 'Crimson Text';
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.45em;
+    color: #000000;
+    border: 1px solid #9C5E00;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all .2s ease-out;
+
+
+}
+
+.filtre {
+    height: 169%;
+    transition: all .2s ease-out;
+
+}
+
+#band p {
+    width: 100%;
+    transition: all .2s ease-out;
+
+}
+
+}

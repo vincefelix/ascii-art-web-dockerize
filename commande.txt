@@ -1,0 +1,17 @@
+-----------Consulter les images docker----------------------------
+
+docker image ls
+
+
+-----------Construire l'image docker------------------------------
+
+docker build -t main .
+
+
+-----------lancer l'image docker sur un fichier-------------------
+
+docker run -p 8080:8080 -tid main .
+
+-----------Supprimer l'image docker-------------------------------
+
+docker rmi main
