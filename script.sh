@@ -1,16 +1,27 @@
 echo "----------------------------------------------------------------------------------"
-echo "docker image build -f Dockerfile -t tryhere ."
-docker image build -f Dockerfile -t tryhere .
+echo "1) Building the image: docker image build -f Dockerfile -t audit ."
+docker image build -f Dockerfile -t audit .
 echo "----------------------------------------------------------------------------------"
 echo "                                                                                  "
 echo "----------------------------------------------------------------------------------"
-echo "docker container run -p 8080 --detach --name Dockerfile tryhere"
-docker container run -p 8080 --detach --name Dockerfile tryhere
+echo "2) Executing the container: docker container run -p 8080 --detach --name Dockerfile audit"
+docker container run -p 8080:8080 --detach --name Dockerfile audit
 echo "----------------------------------------------------------------------------------"
 echo "                                                                                  "
 echo "----------------------------------------------------------------------------------"
-echo "docker exec -it Dockerfile /bin/bash"
+echo "3) Checking the running containers: docker ps"
+docker ps
+echo "----------------------------------------------------------------------------------"
+echo "                                                                                  "
+echo "----------------------------------------------------------------------------------"
+echo "4) Entering the container: docker exec -it Dockerfile /bin/bash"
+echo "4-a) Now enter the "ls -l" command"
 docker exec -it Dockerfile /bin/bash
+echo "----------------------------------------------------------------------------------"
+echo "                                                                                  "
+echo "----------------------------------------------------------------------------------"
+echo "5) Inspecting the metadatas: docker inspect audit"
+docker inspect audit
 echo "----------------------------------------------------------------------------------"
 
 
