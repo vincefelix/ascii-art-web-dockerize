@@ -33,9 +33,9 @@ This project's servor (back-end) is written using GO and the web documents (fron
 
 ### Authors:
 ***
-- Vincent Félix Ndour (our super capitain)-Backend- https://learn.zone01dakar.sn/git/vindour
+- Vincent Félix Ndour (Backend)-Backend- https://learn.zone01dakar.sn/git/vindour
 * Masseck Thiaw (the genius) -Frontend- https://learn.zone01dakar.sn/git/mthiaw
-+ Seynabou Niang (writer) -README- https://learn.zone01dakar.sn/git/sniang
++ Seynabou Niang (our super capitain writer) -README- https://learn.zone01dakar.sn/git/sniang
 
 ### Usage:how to run
 ***
