@@ -101,6 +101,16 @@ func asciiArtHandler(w http.ResponseWriter, r *http.Request) {
 	} */
 	text := r.FormValue("text")
 	banner := r.FormValue("banner")
+	_, err := template.ParseFiles(banner + ".txt")
+	if err != nil {
+		if os.IsNotExist(err) {
+			w.WriteHeader(http.StatusInternalServerError)
+			template, _ := template.ParseFiles("./templates/error500.html")
+			template.Execute(w, r)
+			return
+		}
+
+	}
 	asciiArt := Naboufs(banner+".txt", text)
 	if !Printable(text) {
 		w.WriteHeader(http.StatusNotFound)
